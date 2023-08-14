@@ -27,7 +27,6 @@ namespace ShivaInnovations
             try
             {
                 conexao.Open();//Abrir a conexão com o banco de dados
-                MessageBox.Show("Conectado");
             }
             catch (Exception erro)
             {
