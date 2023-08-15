@@ -144,7 +144,7 @@
             // maskedTextBox1
             // 
             this.maskedTextBox1.Location = new System.Drawing.Point(185, 122);
-            this.maskedTextBox1.Mask = "99999999999";
+            this.maskedTextBox1.Mask = "999.999.999-99";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(391, 20);
             this.maskedTextBox1.TabIndex = 24;
@@ -236,9 +236,10 @@
             this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(625, 752);
-            this.MinimumSize = new System.Drawing.Size(625, 752);
+            this.MinimumSize = new System.Drawing.Size(625, 726);
             this.Name = "Pgto";
             this.Text = "Pagamento";
+            this.Load += new System.EventHandler(this.Pgto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ingressos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
