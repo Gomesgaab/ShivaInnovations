@@ -42,6 +42,7 @@
             this.button1.Font = new System.Drawing.Font("Sitka Text", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.DeepPink;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.ImageKey = "(nenhum/a)";
             this.button1.Location = new System.Drawing.Point(12, 4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(585, 697);
@@ -61,7 +62,7 @@
             this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(625, 752);
-            this.MinimumSize = new System.Drawing.Size(625, 752);
+            this.MinimumSize = new System.Drawing.Size(625, 726);
             this.Name = "Form1";
             this.Text = "StandBy";
             this.Load += new System.EventHandler(this.Form1_Load);

@@ -16,11 +16,12 @@ namespace ShivaInnovations
     public partial class Pgto : Form
     {
         DAO conectar;
+        ControlCPF modelo;
         public Pgto()
         {
             InitializeComponent();
-            conectar = new DAO();               //Ligando o Banco de dados a tabela
-
+            conectar = new DAO();  //Ligando o Banco de dados a tabela
+            modelo = new ControlCPF();
         }//Fim do construtor
 
         private void button1_Click(object sender, EventArgs e)
@@ -31,16 +32,20 @@ namespace ShivaInnovations
                 string result = conectar.Inserir(Convert.ToInt64(maskedTextBox1.Text), nomebox.Text, email.Text, telefone.Text, ingressos.Text, "Cliente");
                 MessageBox.Show(result);
             }
-            catch (Exception erro)
+            catch (Exception erro)  
             {
                 MessageBox.Show("Algo deu errado\n\n" + erro.Message);
             }//Fim do TryCatch
-
         }//Botão comprar
 
         private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
+            string cpf = maskedTextBox1.Text; // Obtém o valor do CPF da MaskedTextBox
 
+            if (this.modelo.ValidarCPF(cpf))
+                Console.WriteLine("CPF válido.");
+            else
+                Console.WriteLine("CPF inválido.");
         }// cpf
 
         private void nomebox_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)

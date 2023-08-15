@@ -98,6 +98,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControlCPF.cs" />
     <Compile Include="DAO.cs" />
     <Compile Include="Eventos.cs">
       <SubType>Form</SubType>
